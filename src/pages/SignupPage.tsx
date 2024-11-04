@@ -19,6 +19,9 @@ export default function SignupPage() {
     }
   }, [isSuccess]);
 
+  console.log("password:", password);
+  console.log("confirmPassword", confirmPassword);
+
   return (
     <Wrapper>
       <div>
@@ -140,16 +143,6 @@ const Input = styled.input`
     color: var(--secondary);
     border-bottom: 1px solid var(--secondary);
   }
-`;
-
-const SignupButton = styled.button`
-  width: 100%;
-  padding: 16px;
-  border-radius: 4px;
-  background-color: ${(props) =>
-    props.disabled ? "var(--mono-100)" : "var(--primary)"};
-  color: ${(props) => (props.disabled ? "var(--mono-200)" : "var(--white)")};
-  margin-bottom: 24px;
 `;
 
 const ErrorMessage = styled.h6`
