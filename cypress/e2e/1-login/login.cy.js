@@ -14,6 +14,15 @@ describe("로그인 화면", () => {
     cy.get("@emailInput").invoke("val").should("eq", "test@email.com");
     cy.get("@passwordInput").invoke("val").should("eq", "password");
 
+    //http mocking
+    cy.intercept(
+      {
+        method: "POST",
+        url: "/user/login",
+      },
+      { token: "Authorization" }
+    ).as("login");
+
     //로그인버튼이존재하면클릭해라
     cy.get("[data-cy=loginButton").should("exist").click();
     // then - 로그인에 성공한다.
