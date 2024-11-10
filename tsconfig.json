@@ -8,7 +8,7 @@
     "baseUrl": "src",
     "allowSyntheticDefaultImports": true,
     "allowImportingTsExtensions": true,
-    "types": ["cypress"],
+    "types": ["jest"],
 
     /* Bundler mode */
     "moduleResolution": "node",
@@ -25,5 +25,6 @@
     "noFallthroughCasesInSwitch": true
   },
   "include": ["src", "**/*.ts"],
+  "exclude": ["cypress.config.ts", "cypress", "node_modules"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
