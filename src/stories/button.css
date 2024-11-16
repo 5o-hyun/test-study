@@ -8,12 +8,14 @@
   font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .storybook-button--primary {
-  background-color: var(--primary);
+  /* background-color: var(--primary); */
+  background-color: #000;
   color: white;
 }
 .storybook-button--secondary {
   box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
   background-color: var(--secondary);
+  background-color: #000;
   color: #333;
 }
 
